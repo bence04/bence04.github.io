@@ -243,7 +243,6 @@
                 svg.html("<g>" + svg.html() + "</g>");
                 var inner = svg.select("g");
                 var zoom = d3.zoom().on("zoom", function(event) {
-                    console.log("zoom:", event.transform);
                     inner.attr("transform", event.transform);
                 });
                 svg.call(zoom);
