@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://use.fontawesome.com/c70f531e40.js"></script>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .mermaid {
+            cursor: grab;
+            width: 100% !important;
+            margin-top: -70% !important;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="mermaid">
+            flowchart TB
+                internet[Internet]:::junior ---> html[HTML]:::junior
+                internet --> Internet
+                html ---> css[Css]:::junior
+                html --> HTML
+                css ---> javascript[JavaScript]:::junior
+                css --> CSS
+                javascript ---> git[Git]:::junior
+                javascript --> JavaScript
+                git ---> cssPreprocessors[CSS Preprocessors]:::medior
+                git --> Git
+                cssPreprocessors ---> buildTools[Build tools]:::medior
+                cssPreprocessors --> CSSPreprocessors
+                buildTools ---> typeScript[TypeScript]:::junior
+                buildTools --> BuildTools
+                typeScript ---> rxjs[RxJs]:::medior
+                typeScript --> TypeScript
+                rxjs ---> angular[Angular]:::junior
+                rxjs --> RxJs
+                angular ---> testing[Testing]:::junior
+                angular --> Angular
+                testing ---> stroybook[Storybook]:::medior
+                testing --> Testing
+                stroybook ---> progressiveWebApp[Progressive Web App]:::senior
+                stroybook --> Storybook
+                progressiveWebApp ---> websockets[Websockets]:::medior
+                progressiveWebApp --> ProgressiveWebApp
+                websockets ---> serverSideRendering[Server Side Rendering]:::senior
+                websockets --> WebSockets
+                serverSideRendering --> ServerSideRendering
+                subgraph Internet
+                    http(fa:fa-book HTTP):::junior
+                    http2(fa:fa-book HTTP2):::junior
+                    browsers(fa:fa-book Browsers):::junior
+                    domainNamesandDNS(fa:fa-video-camera Domain names and DNS):::medior
+                end
+                subgraph HTML
+                    introductionHtml(fa:fa-book Introduction):::junior
+                    bestPractices(fa:fa-book Best practices):::junior
+                end
+                subgraph CSS
+                    direction TB
+                    introductionCss(fa:fa-video-camera Introduction):::junior --- layout(Layout):::junior --> boxModel(fa:fa-book Box model):::junior & flexBox(fa:fa-book Flexbox) & gridGame(fa:fa-gamepad Grid game)
+                    flexBox:::junior --> flexboxGame(fa:fa-gamepad Flexbox game):::junior
+                    gridGame:::junior
+                    introductionCss ----- responsiveDesign(fa:fa-book Responsive design):::medior
+                end
+                subgraph JavaScript
+                    introductionJs(fa:fa-book Introduction):::junior
+                    es6(fa:fa-book ES6):::junior
+                end
+                subgraph Git
+                    introductionGit(fa:fa-video-camera Introduction):::junior
+                    learnGitGame(fa:fa-gamepad Learn git game):::junior
+                end
+                subgraph CSSPreprocessors
+                    introductionCssPreprocessors(fa:fa-book Introduction):::medior
+                    sass(fa:fa-video-camera Sass):::medior
+                end
+                subgraph BuildTools
+                    direction TB
+                    introductionBuildTools(Introduction):::medior --- webpack(fa:fa-book Webpack) & npm(fa:fa-book NPM) & ESLint(fa:fa-book ESLint)
+                    webpack:::medior
+                    npm:::medior
+                    ESLint:::medior
+                end
+                subgraph TypeScript
+                    direction TB
+                    introductionTypeScript(fa:fa-book Introduction):::junior --- interfaces(fa:fa-book Interfaces) & structuralTyping(fa:fa-book Structural typing) & basicTypes(fa:fa-book Basic types)
+                    interfaces:::medior
+                    structuralTyping:::medior
+                    basicTypes:::junior
+                end
+                subgraph RxJs
+                    observablePatterns(fa:fa-book Observable patterns):::medior
+                    rxjsVsPromise(fa:fa-book RxJs vs Promise):::medior
+                    rxjsMarbles(fa:fa-gamepad RxJs marbles):::medior
+                    observablesLifecycle(fa:fa-book Observables lifecycle):::senior
+                end
+                subgraph Angular
+                    direction TB
+                    angularSub[Angular]:::junior
+                    angularSub --- angularJsvsAngular2(fa:fa-book AngularJs vs Angular 2):::junior
+                    angularSub --- architecture(fa:fa-book Architecture):::junior
+                    angularSub --- templates(Templates):::junior --- interpolation(fa:fa-book Interpolation) & propertyBinding(fa:fa-book Property binding) & eventBinding(fa:fa-book Event binding) & refVariables(fa:fa-book #Ref variables)
+                    interpolation:::junior
+                    propertyBinding:::junior
+                    eventBinding:::junior
+                    refVariables:::medior
+                    angularSub --- rendering(Rendering):::junior --- ngif(fa:fa-book NgIf) & ngforof(fa:fa-book NgForOf) & ngclass(fa:fa-book NgClass) & ngstyle(fa:fa-book NgStyle) & pipes(fa:fa-book Pipes)
+                    ngif:::junior
+                    ngforof:::junior
+                    ngclass:::junior
+                    ngstyle:::junior
+                    pipes:::medior
+                    angularSub --- forms(Forms):::junior --- templateDrivenFormsVsReactiveForms(fa:fa-book Template-driven forms vs reactive forms) & validation(fa:fa-book Validation)
+                    templateDrivenFormsVsReactiveForms:::junior
+                    validation:::junior
+                    angularSub --- services(Services):::junior --- introductionServices(fa:fa-book Introduction) & dependenyInjection(fa:fa-book Dependency injection)
+                    introductionServices:::junior
+                    dependenyInjection:::medior
+                    dependenyInjection --> diProviders(fa:fa-book DI providers):::medior
+                    angularSub --- httpAngular(HTTP):::junior --- introductionHttpClient(fa:fa-book Introduction) & interceptors(fa:fa-book Interceptors)
+                    introductionHttpClient:::junior
+                    interceptors:::medior
+                    angularSub --- lifecycleHooks(fa:fa-book Lifecycle hooks):::junior
+                    angularSub --- routing(fa:fa-book Routing):::junior
+                    angularSub --- guards(fa:fa-book Guards):::junior
+                    angularSub --- statemanagement(State management):::senior --- whatIsRedux(fa:fa-book What is Redux) & whyNgrx(fa:fa-book Why ngRx) & ngrxIntroduction(fa:fa-book ngRx introduction)
+                    whatIsRedux:::senior
+                    whyNgrx:::senior
+                    ngrxIntroduction:::senior
+                    angularSub --- directives(Directives):::medior --- structuralDirectives(fa:fa-book Structural directives) & attributeDirectives(fa:fa-book Attribute directives)
+                    structuralDirectives:::medior
+                    attributeDirectives:::medior
+                    angularSub --- lazyLoading(fa:fa-book Lazy loading):::medior
+                    angularSub --- zone(fa:fa-book Zone):::senior
+                    angularSub --- changeDetection(Change detection):::medior --- introductionCD(fa:fa-book Introduction) & changeDetectionsOnPush(fa:fa-book Change detections on push)
+                    introductionCD:::medior
+                    changeDetectionsOnPush:::medior
+                end
+                subgraph Testing
+                    cypress(fa:fa-book Cypress):::junior
+                end
+                subgraph Storybook
+                    introductionSb(fa:fa-book Introduction):::medior
+                end
+                subgraph ProgressiveWebApp
+                    introductionPwa(fa:fa-book Introduction):::senior
+                    serviceWorkers(fa:fa-book Service workers):::senior
+                    notifications(fa:fa-book Notifications):::senior
+                end
+                subgraph WebSockets
+                    introductionWS(fa:fa-book Introduction):::medior
+                end
+                subgraph ServerSideRendering
+                    introductionSSR(fa:fa-book Introduction):::senior
+                end
+                subgraph Legend
+                    direction LR
+                    juniorLegend(Junior):::junior -.-> mediorLegend(Medior):::medior -.-> seniorLegend(Senior):::senior
+                end
+                click http "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" _blank
+                click http2 "https://kamranahmed.info/blog/2016/08/13/http-in-depth/" _blank
+                click browsers "https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work" _blank
+                click domainNamesandDNS "https://www.youtube.com/watch?v=Y4cRx19nhJk" _blank
+                click introductionHtml "https://www.w3schools.com/html/html_intro.asp" _blank
+                click bestPractices "https://github.com/hail2u/html-best-practices" _blank
+                click introductionCss "https://www.youtube.com/watch?v=yfoY53QXEnI" _blank
+                click boxModel "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model " _blank
+                click flexBox "https://css-tricks.com/snippets/css/a-guide-to-flexbox/" _blank
+                click gridGame "https://cssgridgarden.com/#hu" _blank
+                click flexboxGame "https://flexboxfroggy.com/#hu" _blank
+                click responsiveDesign "https://www.w3schools.com/css/css_rwd_intro.asp" _blank
+                click introductionJs "https://www.w3schools.com/js/js_intro.asp" _blank
+                click es6 "https://www.javascripttutorial.net/es6/" _blank
+                click introductionGit "https://www.youtube.com/watch?v=SWYqp7iY_Tc" _blank
+                click learnGitGame "https://learngitbranching.js.org/" _blank
+                click introductionCssPreprocessors "https://sherocommerce.com/what-is-a-css-preprocessors-why-use-them/" _blank
+                click sass "https://www.youtube.com/watch?v=_a5j7KoflTs" _blank
+                click webpack "https://webpack.js.org/" _blank
+                click npm "https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html" _blank
+                click ESLint "https://dev.to/shivambmgupta/eslint-what-why-when-how-5f1d" _blank
+                click introductionTypeScript "https://www.typescripttutorial.net/typescript-tutorial/what-is-typescript/" _blank
+                click interfaces "https://www.typescriptlang.org/docs/handbook/interfaces.html" _blank
+                click structuralTyping "https://medium.com/redox-techblog/structural-typing-in-typescript-4b89f21d6004" _blank
+                click basicTypes "https://www.typescriptlang.org/docs/handbook/basic-types.html" _blank
+                click observablePatterns "https://reactivex.io/documentation/observable.html" _blank
+                click rxjsVsPromise "https://mydaytodo.com/rxjs-observables-vs-javascript-promise/" _blank
+                click rxjsMarbles "https://rxmarbles.com/" _blank
+                click observablesLifecycle "https://www.oodlestechnologies.com/blogs/understanding-rxjs-observables-lifecycle/" _blank
+                click angularJsvsAngular2 "https://www.geeksforgeeks.org/difference-between-angular-and-angularjs/" _blank
+                click architecture "https://angular.io/guide/architecture" _blank
+                click interpolation "https://angular.io/guide/interpolation" _blank
+                click propertyBinding "https://angular.io/guide/property-binding" _blank
+                click eventBinding "https://angular.io/guide/event-binding" _blank
+                click refVariables "https://www.pluralsight.com/guides/how-to-use-template-reference-variables-in-angular" _blank
+                click ngif "https://angular.io/api/common/NgIf" _blank
+                click ngforof "https://angular.io/api/common/NgForOf" _blank
+                click ngclass "https://angular.io/api/common/NgClass" _blank
+                click ngstyle "https://angular.io/api/common/NgStyle" _blank
+                click pipes "https://angular.io/guide/pipes" _blank
+                click templateDrivenFormsVsReactiveForms "https://blog.angular-university.io/introduction-to-angular-2-forms-template-driven-vs-model-driven/" _blank
+                click validation "https://angular.io/guide/form-validation" _blank
+                click introductionServices "https://angular.io/tutorial/toh-pt4" _blank
+                click dependenyInjection "https://angular.io/guide/dependency-injection" _blank
+                click diProviders "https://angular.io/guide/dependency-injection-providers" _blank
+                click introductionHttpClient "https://angular.io/guide/http" _blank
+                click interceptors "https://angular.io/api/common/http/HttpInterceptor" _blank
+                click lifecycleHooks "https://angular.io/guide/lifecycle-hooks" _blank
+                click routing "https://angular.io/guide/router" _blank
+                click guards "https://angular.io/guide/router" _blank
+                click whatIsRedux "https://medium.com/swlh/what-is-redux-b16b42b33820" _blank
+                click whyNgrx "https://v9.ngrx.io/docs#why-ngrx-for-state-management" _blank
+                click ngrxIntroduction "https://ngrx.io/guide/store/walkthrough" _blank
+                click structuralDirectives "https://angular.io/guide/structural-directives" _blank
+                click attributeDirectives "https://angular.io/guide/attribute-directives" _blank
+                click lazyLoading "https://angular.io/guide/lazy-loading-ngmodules" _blank
+                click zone "https://angular.io/guide/zone" _blank
+                click introductionCD "https://blog.angular-university.io/how-does-angular-2-change-detection-really-work/" _blank
+                click changeDetectionsOnPush "https://blog.angular-university.io/onpush-change-detection-how-it-works/" _blank
+                click cypress "https://www.cypress.io/" _blank
+                click introductionSb "https://storybook.js.org/docs/angular/get-started/introduction" _blank
+                click introductionPwa "https://www.freecodecamp.org/news/what-are-progressive-web-apps/" _blank
+                click serviceWorkers "https://developers.google.com/web/ilt/pwa/introduction-to-service-worker" _blank
+                click notifications "https://developers.google.com/web/ilt/pwa/introduction-to-push-notifications" _blank
+                click introductionWS "https://www.raywenderlich.com/13209594-an-introduction-to-websockets" _blank
+                click introductionSSR "https://angular.io/guide/universal" _blank
+                classDef junior fill:#91b0b2,stroke:#91b0b2,color:white;
+                classDef medior fill:#b0e142,stroke:#b0e142,color:white;
+                classDef senior fill:#a2624d,stroke:#a2624d,color:white;
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+        window.addEventListener('load', function () {
+            var svgs = d3.selectAll(".mermaid svg");
+            svgs.each(function() {
+                var svg = d3.select(this);
+                svg.html("<g>" + svg.html() + "</g>");
+                var inner = svg.select("g");
+                var zoom = d3.zoom().on("zoom", function(event) {
+                    console.log("zoom:", event.transform);
+                    inner.attr("transform", event.transform);
+                });
+                svg.call(zoom);
+            });
+        });
+    </script>
+  </body>
+</html>
